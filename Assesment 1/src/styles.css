@@ -1,0 +1,103 @@
+body{
+    font-family: Inter, sans-serif;
+}
+
+#gamesContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 15px;
+    width: 95vw;
+}
+
+.game{
+    background-color: #fafafa;
+    border-radius: 2rem;
+    padding: 10px;
+}
+
+.teamName{
+    font-size: 16px;
+}
+
+#start{
+    border: none;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    padding: 10px 20px;
+    min-width: 110px;
+    min-height: 45px;
+    border-radius: 2rem;
+    font-size: 16px;
+    background-color: #3F4348;
+    color: white;
+    margin: auto auto 10px;
+}
+
+.outer {
+    width: 100%;
+    position: relative;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.innerScoreBar {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(to right, #3F4348 50%, transparent 0);
+    background-size: 200% 100%;
+    background-position: right;
+    z-index: 1;
+}
+
+@keyframes playGame {
+    100% {
+        background-position: left;
+    }
+}
+
+.break, .endGame{
+    display: none;
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    z-index: 2;
+    background-image: url("./checkPattern.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+}
+
+.break{
+    right: 50%;
+}
+
+.endGame{
+    right: 0;
+}
+
+.scoreCard{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    font-size: 50px;
+    margin: 20px auto auto;
+}
+
+.scoreCard div:not(.dash){
+    border-radius: 3px;
+    background-color: #CFD5DB;
+    padding: 20px;
+}
+
+.teamLogo{
+    width: 50px;
+}

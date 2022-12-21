@@ -1,0 +1,30 @@
+ul, #treeRoot {
+    list-style-type: none;
+}
+
+#treeRoot {
+    margin: 0;
+    padding: 0;
+}
+
+.panel {
+    cursor: pointer;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.caret{
+    display: inline-block;
+}
+
+.caretDown {
+    transform: rotate(90deg);
+}
+
+.nested {
+    display: none;
+}
+
+.active {
+    display: block;
+}
